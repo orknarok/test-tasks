@@ -1,0 +1,76 @@
+// basket button + login button floating container
+.user {
+  @extend %letter-spacing-shift;
+  float: right;
+
+  @media (max-width: 950px) {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.user__inner {
+  display: inline-block;
+  line-height: $header-bottom-inner-height;
+}
+
+%user__button {
+  display: inline-block;
+  margin-right: 2rem;
+  background-color: transparent;
+}
+
+%user__icon {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  line-height: inherit;
+  color: $orange-dark;
+  vertical-align: top;
+}
+
+// basket button
+.user__basket {
+  @extend %letter-spacing-normal;
+  @extend %user__button;
+
+  &:hover {
+    @extend %cursor-pointer;
+  }
+
+  // busket icon
+  &::before {
+    @extend %icon;
+    @extend %icon-shopping-cart;
+    @extend %user__icon;
+  }
+}
+
+.user__purchases-number {
+  $size-scale: 2.5rem;
+
+  display: inline-block;
+  width: $size-scale;
+  line-height: $size-scale;
+  text-align: center;
+  color: $white;
+  border-radius: 50%;
+  background-color: $orange-dark;
+
+}
+
+// login button
+.user__login {
+  @extend %letter-spacing-normal;
+  @extend %user__button;
+
+  &:hover {
+    @extend %cursor-pointer;
+  }
+
+  // login icon
+  &::before {
+    @extend %icon;
+    @extend %icon-user-check;
+    @extend %user__icon;
+  }
+}

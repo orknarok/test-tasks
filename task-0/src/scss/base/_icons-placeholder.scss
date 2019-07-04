@@ -1,0 +1,37 @@
+%icon {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+
+  // For safety - reset parent styles, that can break glyph codes
+  font-variant: normal;
+  text-transform: none;
+
+  // fix buttons height, for twitter bootstrap
+  line-height: 1em;
+
+  // Font smoothing. That was taken from TWBS
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%icon-list { content: '\e800'; }
+%icon-phone-call { content: '\e801'; }
+%icon-search { content: '\e802'; }
+%icon-home { content: '\e803'; }
+%icon-left-open { content: '\e804'; }
+%icon-right-open { content: '\e805'; }
+%icon-down-open-mini { content: '\e806'; }
+%icon-shopping-cart { content: '\e807'; }
+%icon-user-check { content: '\e808'; }
+%icon-down-open { content: '\e809'; }
+%icon-menu { content: '\f0c9'; }
+%icon-circle-empty { content: '\f10c'; }
+%icon-circle { content: '\f111'; }
+%icon-circle-thin { content: '\f1db'; }

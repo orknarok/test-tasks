@@ -1,0 +1,25 @@
+// float clearfix
+%clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+}
+
+// one way to get rid of white-spaces between inline-blocks
+// 1. @extend parent container to remove white-spaces for child inline-blocks
+%letter-spacing-shift {
+  // minimum value to remove white-spaces
+  letter-spacing: -0.27em;
+}
+
+// 2. @extend child inline-blocks to set default white-spaces value
+%letter-spacing-normal {
+  letter-spacing: normal;
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}

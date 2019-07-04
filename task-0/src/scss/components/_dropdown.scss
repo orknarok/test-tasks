@@ -1,0 +1,129 @@
+//
+$dropdown-menu-top-shift: ((($header-bottom-height - $header-bottom-inner-height) / 2) + 1.5rem);
+$dropdown-submenu-side-shift: 0.3rem;
+$dropdown-item-width: 24.5rem;
+$dropdown-icon-margin: 1rem;
+$dropdown-icon-circle-size: 0.9rem;
+
+// dropdown block
+.dropdown {
+  position: relative;
+}
+
+// drowdown open link icons
+.dropdown > a {
+  &::before {
+    @extend %icon;
+    @extend %icon-list;
+  }
+
+  &::after {
+    @extend %icon;
+    @extend %icon-down-open;
+  }
+
+  &::before,
+  &::after {
+    margin: 0 5px;
+    font-size: 1.8rem;
+    color: $orange-dark;
+  }
+}
+
+.dropdown__menu {
+  @include position(absolute, $top: 100%, $left: 0);
+  z-index: 1;
+
+  // hide menu
+  display: none;
+
+  // space between dropdown menu and navbar
+  padding-top: $dropdown-menu-top-shift;
+
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: none;
+
+  // show menu
+  .dropdown:hover > & {
+    display: block;
+  }
+}
+
+// dropdown border and shadow effects
+.dropdown__inner {
+  border: 1px solid $gray;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+.dropdown__item {
+  position: relative;
+  width: $dropdown-item-width;
+  background-color: $white;
+
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.dropdown__link {
+  position: relative;
+  display: block;
+
+  // space for icons
+  padding-left: $dropdown-icon-circle-size + $dropdown-icon-margin * 2;
+
+  text-decoration: none;
+  color: $black;
+
+  // dropdown link icons
+  &::before {
+    @extend %icon;
+    @extend %icon-circle-empty;
+    @include position(absolute, $top: 0, $bottom: 0, $left: 0);
+    margin-right: $dropdown-icon-margin;
+    margin-left: $dropdown-icon-margin;
+    font-size: $dropdown-icon-circle-size;
+    line-height: inherit;
+    color: $orange-dark;
+  }
+}
+
+// submenu link right-open arrow icons
+.dropdown__link--submenu::after {
+  @extend %icon;
+  @extend %icon-right-open;
+  @include position(absolute, $top: 0, $right: 0, $bottom: 0);
+  margin-right: $dropdown-icon-margin;
+  margin-left: $dropdown-icon-margin;
+  line-height: inherit;
+  color: $orange-dark;
+}
+
+// submenu
+.dropdown__submenu {
+  $right: (($dropdown-item-width + $dropdown-submenu-side-shift) * -1);
+
+  @include position(absolute, $top: -10px, $right: $right);
+
+  // hide submenu
+  display: none;
+
+  // space between dropdown menu and sub-menu
+  padding-left: $dropdown-submenu-side-shift;
+
+  // show submenu
+  .dropdown__item:hover > & {
+    display: block;
+  }
+}
+
+.dropdown__title {
+  // title horizonal align
+  padding-left: $dropdown-icon-margin;
+
+  font-weight: bold;
+  color: $orange-dark;
+  background-color: $white;
+}

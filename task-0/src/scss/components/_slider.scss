@@ -1,0 +1,131 @@
+.slider {
+  position: relative;
+  max-width: 1354px;
+  margin: 0 auto;
+  // padding: 1.5rem 0;
+}
+
+.slider__item {
+  position: relative;
+  //
+}
+
+.slider__img {
+  display: block;
+  max-width: 1354px;
+  max-height: 326px;
+}
+
+.slider__description {
+  position: absolute;
+  top: 50%;
+  left: 8rem;
+  transform: translate(0, -50%);
+  // z-index: 1111;
+  background-color: $orange-light;
+  color: $white;
+  font-size: 4rem;
+  width: 45rem;
+  padding: 1rem 2rem;
+}
+
+.slider__description > strong {
+  text-transform: uppercase;
+}
+
+// slick-slider elements placed throught js
+// Arrows
+.slider__prev,
+.slider__next {
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 10;
+  width: 4rem;
+  min-height: 15rem;
+  transform: translate(0, -50%);
+  background-color: $orange-light;
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+
+  &::before {
+    @extend %icon;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    font-size: 4rem;
+    color: $white;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    color: $orange-dark;
+  }
+}
+
+.slider__prev {
+  left: 0;
+
+  &::before {
+    @extend %icon-left-open;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slider__next {
+  right: 0;
+
+  &::before {
+    @extend %icon-right-open;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+ // Dots
+.slider__dots {
+  position: absolute;
+  bottom: -30px;
+
+  line-height: 30px;
+  text-align: center;
+
+  width: 100%;
+
+  li {
+    position: relative;
+    display: inline-block;
+    line-height: 2rem;
+
+    margin: 0 1rem;
+
+    button {
+      display: inline-block;
+background: transparent;
+      overflow: hidden;
+      color: transparent;
+      font-size: 0;
+      vertical-align: top;
+      cursor: pointer;
+
+
+      &:before {
+        @extend %icon;
+        @extend %icon-circle;
+        font-size: 2rem;
+        line-height: inherit;
+        color: $orange-dark;
+        vertical-align: top;
+
+      }
+    }
+  }
+}

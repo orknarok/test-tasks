@@ -1,0 +1,57 @@
+// additional style reset
+input,
+textarea,
+button,
+select,
+option,
+optgroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+[hidden] {
+  display: none !important; // One of the good use cases of !important
+}
+
+html {
+  box-sizing: border-box; // change box-sizing:content-box to box-sizing:border-box
+  overflow-y: scroll; // jumping scrollbar fix
+  font-size: $base-rem-size; // set base font-size for rem units
+
+  @media all and (max-width: 1185px) {
+    font-size: 9px;
+  }
+
+  @media all and (max-width: 1070px) {
+    font-size: 8px;
+  }
+
+  @media all and (max-width: 800px) {
+    font-size: (10px / 14px * 10px); // calculate font-size for 1.4 rem = 10px;
+  }
+}
+
+// box-sizing:border-box inherit for all elements
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font: 400 $base-font-size / normal $base-font-family;
+  background-color: $base-background-color;
+}
+
+// responsive images
+img {
+  width: 100%;
+  height: 100%;
+}

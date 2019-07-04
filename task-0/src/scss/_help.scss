@@ -1,0 +1,40 @@
+header,
+main,
+footer,
+
+aside,
+article,
+section,
+nav,
+
+h1,
+h2,
+h3,
+
+p,
+span,
+
+a,
+
+ol,
+ul,
+li,
+
+form,
+input,
+button,
+
+div,
+*::before,
+*::after  {
+  background-color: rgba(0, 70, 50, 0.2);
+}
+
+a:hover,
+a:hover::after,
+a:hover::before,
+button:hover,
+button:hover::after,
+button:hover::before, {
+  background-color: rgba(255, 50, 50, 0.2);
+}

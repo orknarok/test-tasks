@@ -1,0 +1,35 @@
+// css naming
+// block-name__elem-name--mod-name_mod-val:pseudo-class::pseudo-element
+
+@charset "UTF-8";
+
+@import 'abstracts/variables';
+@import 'abstracts/placeholders';
+@import 'abstracts/mixins';
+
+// slick slider
+// @import 'vendors-extensions/slick-theme-variables';
+@import 'vendors/slick';
+// @import 'vendors/slick-theme';
+
+// @import 'vendors-extensions/slick-theme';
+
+@import '../../node_modules/reset-css/sass/reset';
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/icons';
+@import 'base/icons-placeholder';
+
+@import 'layouts/page';
+@import 'layout/header';
+
+@import 'components/logo';
+@import 'components/search';
+@import 'components/contacts';
+@import 'components/navbar';
+@import 'components/dropdown';
+@import 'components/user';
+@import 'components/slider';
+
+// @import 'help';
+@import 'shame';

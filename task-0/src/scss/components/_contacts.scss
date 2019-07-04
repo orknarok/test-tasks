@@ -1,0 +1,50 @@
+.contacts {
+  // float: right;
+  display: table-cell;
+    // width: 35.7rem;
+    // width: 30%;
+}
+
+.contacts__inner {
+
+  @extend %letter-spacing-shift;
+  display: inline-block;
+  // container height
+  // vertical centering for descendent inline/inline-block elements
+  line-height: $header-top-inner-height;
+}
+
+%contacts__item {
+  display: inline-block;
+  padding-left: 1.5rem;
+  // elements have same line-height but different baseline, so we
+  // change default vertical-align: baseline; to vertical-align: top;
+  // for centering elements
+  vertical-align: top;
+}
+
+.contacts__phone {
+  @extend %contacts__item;
+  @extend %letter-spacing-normal;
+  font-size: 2.3rem;
+  text-decoration: none;
+  color: $black;
+}
+
+.contacts__delivery {
+  @extend %contacts__item;
+  @extend %letter-spacing-normal;
+}
+
+.contacts__time {
+  display: block;
+
+  line-height: ($header-top-inner-height / 2);
+  color: $orange-dark;
+}
+
+.contacts__territory {
+  display: block;
+  line-height: ($header-top-inner-height / 2);
+  color: $blue-dark;
+}

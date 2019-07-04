@@ -1,0 +1,38 @@
+.header {
+  max-width: $header-max-width;
+  // set horizontal centering + set margin-bottom
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+}
+
+.header__top {
+  @extend %clearfix;
+  display: table;
+  width: 100%;
+
+
+  // set height
+  // set vertical centering for descendent inline/inline-block elements
+  line-height: $header-top-height;
+
+  @media (max-width: 950px) {
+    line-height: ($header-top-height - 4rem);
+    padding-top: 2rem;
+  }
+}
+
+.header__bottom {
+  @extend %clearfix;
+  font-size: 1.6rem;
+  font-weight: bold;
+  // set height
+  // set vertical centering for descendent inline/inline-block elements
+  line-height: $header-bottom-height;
+  text-transform: uppercase;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+
+  @media (max-width: 950px) {
+    border: none;
+  }
+}

@@ -1,0 +1,38 @@
+// 3rem initial height, 24.7rem initial width
+$logo-img-height: 3rem;
+// width relative to heigth
+$logo-img-width: $logo-img-height * (24.7rem / 3rem);
+
+.logo {
+  // float: left;
+  display: table-cell;
+  // width: ($logo-img-width + 4rem);
+  padding-right: 4rem;
+}
+
+.logo__link {
+  position: relative;
+  display: inline-block;
+  line-height: $header-top-inner-height;
+}
+
+.logo__img {
+  height: $logo-img-height;
+  width: $logo-img-width;
+
+  // black-magic
+  // shift img below baseline
+  // to remove space below img and vertical centering
+  vertical-align: -1rem;
+}
+
+.logo__description {
+  // text position-top shift
+  // text always below img at same distance
+  $top-position: ($header-top-inner-height - (($header-top-inner-height - $logo-img-height) / 2));
+
+  @include position(absolute, $top: $top-position, $left: 0);
+  line-height: normal;
+  padding-top: 0.5rem;
+  color: $blue-light;
+}

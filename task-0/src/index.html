@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Page -->
+    <div class="page">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header__top">
+
+          <!-- Logo -->
+          <div class="logo">
+            <a href="#" class="logo__link">
+              <img src="img/logo__img.png" alt="" class="logo__img" />
+              <h1 class="logo__description">Интернет-магазин «Благой арт»</h1>
+            </a>
+          </div>
+
+          <!-- Search -->
+          <div class="search">
+            <form action="#" class="search__form">
+              <input type="text" placeholder="Введите название или артикул" class="search__input" />
+              <button type="submit" class="search__button"></button>
+            </form>
+          </div>
+
+          <!-- Contacts -->
+          <div class="contacts">
+            <div class="contacts__inner">
+              <a href="tel:+7 (800) 707-81-39" class="contacts__phone">+7 (800) 707-81-39</a>
+              <p class="contacts__delivery">
+                <span class="contacts__time">ПН-ПТ с 9:00 до 18:00</span>
+                <span class="contacts__territory">Доставка по РФ и СНГ</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="header__bottom">
+
+          <!-- User -->
+          <div class="user">
+            <div class="user__inner">
+
+              <!-- Basket button -->
+              <button class="user__basket"><span class="user__purchases-number">10</span>
+                Товаров / 56 789 Р
+              </button>
+
+              <!-- Login button -->
+              <button class="user__login">Войти</button>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="navbar">
+
+            <!-- Menu -->
+            <ul class="navbar__menu">
+              <li class="navbar__item dropdown">
+
+                <a href="#">Каталог товаров</a>
+
+                <!-- Dropdown menu -->
+                <ul class="dropdown__menu">
+                  <div class="dropdown__inner">
+                    <li class="dropdown__item">
+                      <a class="dropdown__link dropdown__link--submenu" href="#">Свадебная бижутерия</a>
+
+                      <!-- Dropdown submenu -->
+                      <ul class="dropdown__submenu">
+                        <div class="dropdown__inner">
+                          <li class="dropdown__title">Свадебная бижутерия</li>
+                          <li class="dropdown__item"><a class="dropdown__link" href="#">dropdown__item</a></li>
+                          <li class="dropdown__item"><a class="dropdown__link" href="#">dropdown__item</a></li>
+                          <li class="dropdown__item"><a class="dropdown__link" href="#">dropdown__item</a></li>
+                       </div>
+                      </ul>
+
+                    </li>
+
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Аксессуары для волос</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Броши</a></li>
+
+                    <li class="dropdown__item">
+                      <a class="dropdown__link dropdown__link--submenu" href="#">Мужские аксессуары</a>
+
+                      <!-- Dropdown submenu -->
+                      <ul class="dropdown__submenu">
+                        <div class="dropdown__inner">
+                          <li class="dropdown__title">Мужская бижутерия</li>
+                          <li class="dropdown__item"><a class="dropdown__link" href="#">Браслеты</a></li>
+                          <li class="dropdown__item"><a class="dropdown__link" href="#">Кулоны</a></li>
+                          <li class="dropdown__item"><a class="dropdown__link" href="#">Зажимы и запонки</a></li>
+                        </div>
+                      </ul>
+
+                    </li>
+
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Клатчи</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Детская бижутерия</a></li>
+                    <li class="dropdown__item"><a class="dropdown__link" href="#">Демонстрационное оборудование</a></li>
+                  </div>
+                </ul>
+              </li>
+
+              <li class="navbar__item"><a href="#">Условия работы</a></li>
+              <li class="navbar__item"><a href="#">Скидки</a></li>
+              <li class="navbar__item"><a href="#">Оплата и Доставка</a></li>
+              <li class="navbar__item"><a href="#">Документы</a></li>
+              <li class="navbar__item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </header>
+
+      <!-- Slider -->
+      <div class="js-slider slider">
+        <div class="slider__item">
+          <img src="img/slider__img.jpg" alt="" class="slider__img" />
+          <p class="slider__description">Новая коллекция <strong>Swarovski</strong> уже здесь!</p>
+        </div>
+        <div><img src="img/slider__img.jpg" alt="" class="slider__img" /></div>
+        <div><img src="img/slider__img.jpg" alt="" class="slider__img" /></div>
+      </div>
+
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="js/vendors/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+  </body>
+</html>
