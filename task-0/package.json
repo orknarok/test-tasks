@@ -19,7 +19,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^9.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "postcss": "^7.0.17",
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
